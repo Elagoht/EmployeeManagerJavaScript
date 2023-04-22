@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Employees Panel</title>
+  <script defer src="./bundles/bundle.js"></script>
+</head>
+
+<body class="p-5">
+  <div class="container">
+    <div class="card">
+      <div class="card-header fs-5 bg-dark text-light">Add/Modify Employees</div>
+      <div class="card-body">
+        <form id="employee-form" name="form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input class="form-control" name="name" id="name">
+          </div>
+          <div class="form-group">
+            <label for="department">Department</label>
+            <input class="form-control" name="department" id="department" placeholder="i.e: Human Resources">
+          </div>
+          <div class="form-group">
+            <label for="department">Title</label>
+            <input class="form-control" name="title" id="title" placeholder="i.e: Recruitment Manager">
+          </div>
+          <div class="form-group">
+            <label for="department">Salary</label>
+            <input class="form-control" name="salary" id="salary" placeholder="i.e: 5000">
+            <small>This field must be entered as an integer without any periods.</small>
+          </div>
+          <button type="submit" id="submit" class="btn btn-success mt-3">Add Entry</button>
+        </form>
+        <button id="update" class="btn btn-primary mt-3" style="display:none;">Update Employee</button>
+        <div id="notifications"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header fs-5 bg-dark text-light">Employess</div>
+      <table class="table table-light table-hover table-striped table-bordered mb-0">
+        <thead class="table-dark">
+          <tr>
+            <th class="text-right">ID</th>
+            <th>Full Name</th>
+            <th>Department</th>
+            <th>Title</th>
+            <th class="text-right">Salary</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="employees">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
